@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .customCheckBoxContainer {
+            display: inline-block;
+            position: relative;
+            padding-left: 27px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 400;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .permissionBodyContentItem {
+            margin-right: 30px;
+        }
+
+        .permissionBody {
+            display: flex;
+        }
+
+        .checkboxText {
+            font-size: 14px;
+            color: #3e5570;
+            ;
+        }
+
+        .customCheckBoxContainer input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 14px;
+            width: 14px;
+            border-radius: 3px;
+            border: 1px solid #95AFC0;
+        }
+
+        .customCheckBoxContainer input:checked~.checkmark {
+            background-image: linear-gradient(to right, #00a5ff, #58c5ff);
+            border: 1px solid #00a5ff;
+            ;
+            box-shadow: 0 0 15px rgb(0 165 255 / 30%);
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .customCheckBoxContainer input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .customCheckBoxContainer .checkmark:after {
+            left: 4px;
+            top: 1px;
+            width: 4px;
+            height: 8px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="permissionBody">
+        <div class="permissionBodyContentItem">
+            <label class="customCheckBoxContainer">
+                <span class="checkboxText">All</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="permissionBodyContentItem">
+            <label class="customCheckBoxContainer">
+                <span class="checkboxText">View</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="permissionBodyContentItem">
+            <label class="customCheckBoxContainer">
+                <span class="checkboxText">Add</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="permissionBodyContentItem">
+            <label class="customCheckBoxContainer">
+                <span class="checkboxText">Edit</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="permissionBodyContentItem">
+            <label class="customCheckBoxContainer">
+                <span class="checkboxText">Report</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+
+</body>
+
+</html>
